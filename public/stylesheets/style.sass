@@ -1,6 +1,58 @@
+@import url(https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i)
+
+$black: #333
+$white: #fff
+
+$primary-color: #2e4172
+$lighter-color: #7886ab
+$light-color: #4f618e
+$dark-color: #162855
+$darkest-color: #061539
+
+$create-color: #236467
+$delete-color: hsl(0, 40%, 50%)
+
 body
   padding: 50px
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif
 
 a
   color: #00B7FF
+
+@mixin primary-header-text
+  font-family: Lora, serif
+  font-weight: 700
+  font-color: $white
+  font-size: 2rem
+  letter-spacing: -2px
+
+@mixin header-text
+  font-family: Lora, serif
+  font-weight: 400
+  font-color: $black
+  font-size: 2rem
+
+@mixin subheader-text
+  font-family: Lora, serif
+  font-weight: 700
+  font-color: $black
+  font-size: 1rem
+
+@mixin body-text
+  font-family: Lora, serif
+  font-weight: 400
+  font-color: $black
+  font-size: 1rem
+
+body > header
+  background-color: $darkest-color
+  padding: 1rem
+  a
+    text-decoration: none
+    color: $white
+    .logo
+      display: inline-block
+      font-size: 2rem
+    h1
+      display: inline-block
+      @include primary-header-text
